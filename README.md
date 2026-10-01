@@ -190,13 +190,13 @@ SmartServe/
 ├── client/
 │   ├── src/
 │   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── context/
-│   │   └── App.js
-│   │
-│   └── package.json
+│   ├── pages/
+│   ├── services/
+│   ├── context/
+│   └── App.js
 │
+└── package.json
+
 ├── server/
 │   ├── controllers/
 │   ├── models/
