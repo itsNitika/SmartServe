@@ -103,23 +103,23 @@ e) Development Tools :
 
 The basic flow of the application is:
 
-  User
-    ↓
-  Register / Login
-    ↓
-  View Available Services
-    ↓
-  Select a Service
-    ↓
-  Create Service Request
-    ↓
-  Request Stored in Database
-    ↓
-  Request Assigned / Processed
-    ↓
-  Status Updated
-    ↓
-  User Tracks Request
+  • User
+
+  • Register / Login
+
+  • View Available Services
+
+  • Select a Service
+
+  • Create Service Request
+
+  • Request Stored in Database
+
+  • Request Assigned / Processed
+
+  • Status Updated
+
+  • User Tracks Request
 
 
 a) User Registration/Login :
@@ -437,15 +437,25 @@ d) Error Handling :
 While building SmartServe, I got practical experience with:
 
   • Full-stack web development
+
   • React.js
+
   • Node.js and Express.js
+
   • REST API development
+
   • MongoDB
+
   • JWT authentication
+
   • Protected routes
+
   • Role-based authorization
+
   • Frontend-backend integration
+
   • API testing using Postman
+
   • Git and GitHub
 
 
@@ -454,13 +464,21 @@ While building SmartServe, I got practical experience with:
 Some features that can be added in the future are:
 
   • Real-time notifications
+
   • Email and SMS notifications
+
   • Online payment integration
+
   • Rating and review system
+
   • Advanced admin dashboard
+
   • Better analytics and reports
+
   • Location-based service tracking
+
   • AI-based service recommendations
+
   • Mobile application
 
 
