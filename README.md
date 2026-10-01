@@ -15,132 +15,132 @@ Instead of depending on manual communication, the complete process can be handle
 
 a) User Side :
 
-Users can register, log in, view available services, create service requests, and track their request status.
+  • Users can register, log in, view available services, create service requests, and track their request status.
 
 b) Service Management :
 
-Services can be added and managed through the system. Users can select the service they need and create a request.
+  • Services can be added and managed through the system. Users can select the service they need and create a request.
 
 c) Request Tracking :
 
-After creating a request, users can check whether the request is pending, assigned, in progress, or completed.
+  • After creating a request, users can check whether the request is pending, assigned, in progress, or completed.
 
-Pending → Assigned → In Progress → Completed
+  • Pending → Assigned → In Progress → Completed
 
 
 2. Features :
 
 a) User Authentication :
 
-Users can create an account and log in securely. JWT is used to authenticate users and protect private routes.
+  • Users can create an account and log in securely. JWT is used to authenticate users and protect private routes.
 
 b) Service Management :
 
-Users can view the available services and select the service they want to request.
+  • Users can view the available services and select the service they want to request.
 
 c) Service Requests :
 
-Users can create a request for a particular service. The request is stored in the database and can be accessed later.
+  • Users can create a request for a particular service. The request is stored in the database and can be accessed later.
 
 d) Request Tracking :
 
-Users can track the current status of their service requests.
+  • Users can track the current status of their service requests.
 
-A request can move through stages such as:
+  • A request can move through stages such as:
 
-Pending → Assigned → In Progress → Completed
+    Pending → Assigned → In Progress → Completed
 
 e) Role-Based Access :
 
-Different users can have different permissions. For example, a normal user can create and track requests, while an admin can manage users, services, and requests.
+  • Different users can have different permissions. For example, a normal user can create and track requests, while an admin can manage users, services, and requests.
 
 f) REST APIs :
 
-The frontend communicates with the backend through REST APIs for authentication, services, requests, and other operations.
+  • The frontend communicates with the backend through REST APIs for authentication, services, requests, and other operations.
 
 
 3. Tech Stack :
 
 a) Frontend :
 
-- React.js
-- JavaScript
-- HTML5
-- CSS3
+  • React.js
+  • JavaScript
+  • HTML5
+  • CSS3
 
-React.js is used to build the user interface and create reusable components.
+  • React.js is used to build the user interface and create reusable components.
 
 b) Backend :
 
-- Node.js
-- Express.js
-- REST APIs
+  • Node.js
+  • Express.js
+  • REST APIs
 
-Node.js and Express.js are used to handle API requests, authentication, business logic, and communication with the database.
+  • Node.js and Express.js are used to handle API requests, authentication, business logic, and communication with the database.
 
 c) Database :
 
-- MongoDB
+  • MongoDB
 
-MongoDB is used to store users, services, service requests, and other application data.
+  • MongoDB is used to store users, services, service requests, and other application data.
 
 d) Authentication :
 
-- JWT (JSON Web Token)
+  • JWT (JSON Web Token)
 
-JWT is used to authenticate users and protect private APIs.
+  • JWT is used to authenticate users and protect private APIs.
 
 e) Development Tools :
 
-- Git
-- GitHub
-- Postman
-- VS Code
-- MongoDB
+  • Git
+  • GitHub
+  • Postman
+  • VS Code
+  • MongoDB
 
 
 4. How SmartServe Works :
 
 The basic flow of the application is:
 
-User
-  ↓
-Register / Login
-  ↓
-View Available Services
-  ↓
-Select a Service
-  ↓
-Create Service Request
-  ↓
-Request Stored in Database
-  ↓
-Request Assigned / Processed
-  ↓
-Status Updated
-  ↓
-User Tracks Request
+  User
+    ↓
+  Register / Login
+    ↓
+  View Available Services
+    ↓
+  Select a Service
+    ↓
+  Create Service Request
+    ↓
+  Request Stored in Database
+    ↓
+  Request Assigned / Processed
+    ↓
+  Status Updated
+    ↓
+  User Tracks Request
 
 
 a) User Registration/Login :
 
-The user first creates an account or logs into an existing account.
+  • The user first creates an account or logs into an existing account.
 
 b) Service Selection :
 
-After logging in, the user can view the available services and select the required service.
+  • After logging in, the user can view the available services and select the required service.
 
 c) Request Creation :
 
-The user submits the required details and creates a service request.
+  • The user submits the required details and creates a service request.
 
 d) Request Processing :
 
-The request is stored in MongoDB and can then be assigned and processed.
+  • The request is stored in MongoDB and can then be assigned and processed.
 
 e) Status Tracking :
 
-The status of the request is updated as the service progresses, allowing the user to track it.
+  • The status of the request is updated as the service progresses, allowing the user to track it.
 
 
 5. Authentication :
@@ -149,38 +149,38 @@ SmartServe uses JWT-based authentication.
 
 The basic authentication flow is:
 
-User enters login details
-        ↓
-Frontend sends login request
-        ↓
-Backend verifies credentials
-        ↓
-JWT token is generated
-        ↓
-Token is sent to frontend
-        ↓
-Frontend sends token with protected requests
-        ↓
-Backend verifies token
-        ↓
-Request is allowed
+  User enters login details
+          ↓
+  Frontend sends login request
+          ↓
+  Backend verifies credentials
+          ↓
+  JWT token is generated
+          ↓
+  Token is sent to frontend
+          ↓
+  Frontend sends token with protected requests
+          ↓
+  Backend verifies token
+          ↓
+  Request is allowed
 
 
 a) Registration :
 
-A new user provides their details and creates an account.
+  • A new user provides their details and creates an account.
 
 b) Login :
 
-The backend verifies the user's credentials.
+  • The backend verifies the user's credentials.
 
 c) Token Generation :
 
-After successful login, the server generates a JWT token.
+  • After successful login, the server generates a JWT token.
 
 d) Protected Routes :
 
-The token is checked before allowing access to protected APIs.
+  • The token is checked before allowing access to protected APIs.
 
 
 6. Project Structure :
@@ -226,27 +226,74 @@ The token is checked before allowing access to protected APIs.
 
 a) Client :
 
-The "client" folder contains the React frontend, including pages, components, and API-related code.
+  • The "client" folder contains the React frontend, including pages, components, and API-related code.
 
 b) Server :
 
-The "server" folder contains the Node.js and Express backend, including routes, controllers, models, and middleware.
+  • The "server" folder contains the Node.js and Express backend, including routes, controllers, models, and middleware.
 
 
 7. API Overview :
 
-Some of the main APIs are:
+a) Authentication APIs :
 
-Method   Endpoint                    Description
-POST     /api/auth/register         Register a new user
-POST     /api/auth/login            Login user
-GET      /api/services              Get available services
-POST     /api/services              Add a new service
-POST     /api/requests              Create a service request
-GET      /api/requests              Get service requests
-GET      /api/requests/:id          Get request details
-PUT      /api/requests/:id          Update a request
-DELETE   /api/requests/:id          Delete a request
+  • Register User
+
+    POST /api/auth/register
+
+    Used to create a new user account.
+
+  • Login User
+
+    POST /api/auth/login
+
+    Used to authenticate a user and generate a JWT token.
+
+b) Service APIs :
+
+  • Get Services
+
+    GET /api/services
+
+    Used to fetch all available services.
+
+  • Add Service
+
+    POST /api/services
+
+    Used to add a new service.
+
+c) Request APIs :
+
+  • Create Service Request
+
+    POST /api/requests
+
+    Used to create a new service request.
+
+  • Get Service Requests
+
+    GET /api/requests
+
+    Used to fetch service requests.
+
+  • Get Request Details
+
+    GET /api/requests/:id
+
+    Used to get details of a specific request.
+
+  • Update Request
+
+    PUT /api/requests/:id
+
+    Used to update the details or status of a request.
+
+  • Delete Request
+
+    DELETE /api/requests/:id
+
+    Used to delete a service request.
 
 
 8. Database Structure :
@@ -255,60 +302,60 @@ MongoDB is used to store the application data.
 
 a) Users :
 
-Stores information related to registered users.
+  • Stores information related to registered users.
 
 b) Services :
 
-Stores the services available on the platform.
+  • Stores the services available on the platform.
 
 c) Service Requests :
 
-Stores the requests created by users.
+  • Stores the requests created by users.
 
-A service request can contain information such as:
+  • A service request can contain information such as:
 
-{
-  "userId": "user_id",
-  "serviceId": "service_id",
-  "status": "Pending",
-  "createdAt": "timestamp"
-}
+    {
+      "userId": "user_id",
+      "serviceId": "service_id",
+      "status": "Pending",
+      "createdAt": "timestamp"
+    }
 
 
 9. User Roles :
 
 a) User :
 
-A normal user can:
+  • A normal user can:
 
-- Register and log in
-- View available services
-- Create service requests
-- View their requests
-- Track request status
-- View request history
+    • Register and log in
+    • View available services
+    • Create service requests
+    • View their requests
+    • Track request status
+    • View request history
 
 b) Service Provider :
 
-A service provider can:
+  • A service provider can:
 
-- View assigned requests
-- Accept requests
-- Update request status
-- Manage assigned services
-- Mark requests as completed
+    • View assigned requests
+    • Accept requests
+    • Update request status
+    • Manage assigned services
+    • Mark requests as completed
 
 c) Admin :
 
-An admin can manage the overall application.
+  • An admin can manage the overall application.
 
-Admin operations can include:
+  • Admin operations can include:
 
-- Managing users
-- Managing services
-- Viewing requests
-- Assigning requests
-- Updating request information
+    • Managing users
+    • Managing services
+    • Viewing requests
+    • Assigning requests
+    • Updating request information
 
 
 10. Getting Started :
@@ -317,42 +364,42 @@ Follow these steps to run SmartServe locally.
 
 a) Clone the Repository :
 
-git clone <repository-url>
-cd SmartServe
+  git clone <repository-url>
+  cd SmartServe
 
 b) Install Frontend Dependencies :
 
-cd client
-npm install
+  cd client
+  npm install
 
 c) Install Backend Dependencies :
 
-cd ../server
-npm install
+  cd ../server
+  npm install
 
 d) Configure Environment Variables :
 
-Create a ".env" file inside the "server" folder.
+  • Create a ".env" file inside the "server" folder.
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+  PORT=5000
+  MONGO_URI=your_mongodb_connection_string
+  JWT_SECRET=your_jwt_secret
 
 e) Start the Backend :
 
-cd server
-npm start
+  cd server
+  npm start
 
 f) Start the Frontend :
 
-Open another terminal and run:
+  • Open another terminal and run:
 
-cd client
-npm start
+  cd client
+  npm start
 
-The application will normally be available at:
+  • The application will normally be available at:
 
-http://localhost:3000
+  http://localhost:3000
 
 
 11. Why I Built SmartServe :
@@ -368,82 +415,94 @@ The project also helped me understand how the frontend and backend communicate w
 
 a) Authentication and Authorization :
 
-Making sure that only authenticated users could access protected features was one of the important parts of the project.
+  • Making sure that only authenticated users could access protected features was one of the important parts of the project.
 
-I also had to make sure that users could only perform actions allowed by their role.
+  • I also had to make sure that users could only perform actions allowed by their role.
 
 b) Frontend and Backend Integration :
 
-Connecting the React frontend with the Express backend and handling API responses properly was another important part of the project.
+  • Connecting the React frontend with the Express backend and handling API responses properly was another important part of the project.
 
 c) Database Management :
 
-Managing users, services, and service requests required a proper database structure so that the required information could be stored and retrieved easily.
+  • Managing users, services, and service requests required a proper database structure so that the required information could be stored and retrieved easily.
 
 d) Error Handling :
 
-The application also needs to handle invalid requests, incorrect inputs, and server-side errors without breaking the user experience.
+  • The application also needs to handle invalid requests, incorrect inputs, and server-side errors without breaking the user experience.
 
 
 13. What I Learned :
 
 While building SmartServe, I got practical experience with:
 
-- Full-stack web development
-- React.js
-- Node.js and Express.js
-- REST API development
-- MongoDB
-- JWT authentication
-- Protected routes
-- Role-based authorization
-- Frontend-backend integration
-- API testing using Postman
-- Git and GitHub
+  • Full-stack web development
+  • React.js
+  • Node.js and Express.js
+  • REST API development
+  • MongoDB
+  • JWT authentication
+  • Protected routes
+  • Role-based authorization
+  • Frontend-backend integration
+  • API testing using Postman
+  • Git and GitHub
 
 
 14. Future Improvements :
 
 Some features that can be added in the future are:
 
-- Real-time notifications
-- Email and SMS notifications
-- Online payment integration
-- Rating and review system
-- Advanced admin dashboard
-- Better analytics and reports
-- Location-based service tracking
-- AI-based service recommendations
-- Mobile application
+  • Real-time notifications
+  • Email and SMS notifications
+  • Online payment integration
+  • Rating and review system
+  • Advanced admin dashboard
+  • Better analytics and reports
+  • Location-based service tracking
+  • AI-based service recommendations
+  • Mobile application
 
 
 15. Screenshots :
 
 Screenshots of the application can be added here to show the main pages and features.
 
-• Login Page
+a) Login Page :
 
   • login.png
 
-• Register Page
+  • Shows the user login interface.
+
+b) Register Page :
 
   • register.png
 
-• Dashboard
+  • Shows the user registration interface.
+
+c) Dashboard :
 
   • dashboard.png
 
-• Services Page
+  • Shows the main user dashboard after login.
+
+d) Services Page :
 
   • services.png
 
-• Service Request Page
+  • Shows the list of available services.
+
+e) Service Request Page :
 
   • request.png
 
-• Admin Dashboard
+  • Shows the interface used to create and manage service requests.
+
+f) Admin Dashboard :
 
   • admin-dashboard.png
+
+  • Shows the admin interface for managing users, services, and requests.
 
 
 16. Contributing :
