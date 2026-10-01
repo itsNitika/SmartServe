@@ -7,7 +7,7 @@ The main idea behind this project is to make the service request process simple,
 The project also includes a backend system for handling users, services, authentication, and service requests.
 
 
-1. What is SmartServe? :
+1. What is SmartServe?
 
 SmartServe provides a single platform where users can request services and track their requests.
 
@@ -25,6 +25,7 @@ c) Request Tracking :
 
 After creating a request, users can check whether the request is pending, assigned, in progress, or completed.
 
+Pending → Assigned → In Progress → Completed
 
 
 2. Features :
@@ -56,7 +57,6 @@ Different users can have different permissions. For example, a normal user can c
 f) REST APIs :
 
 The frontend communicates with the backend through REST APIs for authentication, services, requests, and other operations.
-
 
 
 3. Tech Stack :
@@ -99,7 +99,6 @@ e) Development Tools :
 - MongoDB
 
 
-
 4. How SmartServe Works :
 
 The basic flow of the application is:
@@ -122,6 +121,7 @@ Status Updated
   ↓
 User Tracks Request
 
+
 a) User Registration/Login :
 
 The user first creates an account or logs into an existing account.
@@ -141,7 +141,6 @@ The request is stored in MongoDB and can then be assigned and processed.
 e) Status Tracking :
 
 The status of the request is updated as the service progresses, allowing the user to track it.
-
 
 
 5. Authentication :
@@ -166,6 +165,7 @@ Backend verifies token
         ↓
 Request is allowed
 
+
 a) Registration :
 
 A new user provides their details and creates an account.
@@ -181,7 +181,6 @@ After successful login, the server generates a JWT token.
 d) Protected Routes :
 
 The token is checked before allowing access to protected APIs.
-
 
 
 6. Project Structure :
@@ -210,6 +209,7 @@ SmartServe/
 ├── .gitignore
 └── README.md
 
+
 a) Client :
 
 The "client" folder contains the React frontend, including pages, components, and API-related code.
@@ -219,22 +219,20 @@ b) Server :
 The "server" folder contains the Node.js and Express backend, including routes, controllers, models, and middleware.
 
 
-
 7. API Overview :
 
 Some of the main APIs are:
 
-Method| Endpoint| Description
-POST| "/api/auth/register"| Register a new user
-POST| "/api/auth/login"| Login user
-GET| "/api/services"| Get available services
-POST| "/api/services"| Add a new service
-POST| "/api/requests"| Create a service request
-GET| "/api/requests"| Get service requests
-GET| "/api/requests/:id"| Get request details
-PUT| "/api/requests/:id"| Update a request
-DELETE| "/api/requests/:id"| Delete a request
-
+Method   Endpoint                    Description
+POST     /api/auth/register         Register a new user
+POST     /api/auth/login            Login user
+GET      /api/services              Get available services
+POST     /api/services              Add a new service
+POST     /api/requests              Create a service request
+GET      /api/requests              Get service requests
+GET      /api/requests/:id          Get request details
+PUT      /api/requests/:id          Update a request
+DELETE   /api/requests/:id          Delete a request
 
 
 8. Database Structure :
@@ -261,7 +259,6 @@ A service request can contain information such as:
   "status": "Pending",
   "createdAt": "timestamp"
 }
-
 
 
 9. User Roles :
@@ -298,7 +295,6 @@ Admin operations can include:
 - Viewing requests
 - Assigning requests
 - Updating request information
-
 
 
 10. Getting Started :
@@ -345,7 +341,6 @@ The application will normally be available at:
 http://localhost:3000
 
 
-
 11. Why I Built SmartServe :
 
 I wanted to build something that was more than a basic CRUD application.
@@ -353,7 +348,6 @@ I wanted to build something that was more than a basic CRUD application.
 While working on SmartServe, I wanted to understand how a real-world application handles authentication, different user roles, service requests, APIs, and database operations together.
 
 The project also helped me understand how the frontend and backend communicate with each other in a complete full-stack application.
-
 
 
 12. Challenges Faced :
@@ -377,7 +371,6 @@ d) Error Handling :
 The application also needs to handle invalid requests, incorrect inputs, and server-side errors without breaking the user experience.
 
 
-
 13. What I Learned :
 
 While building SmartServe, I got practical experience with:
@@ -395,7 +388,6 @@ While building SmartServe, I got practical experience with:
 - Git and GitHub
 
 
-
 14. Future Improvements :
 
 Some features that can be added in the future are:
@@ -411,7 +403,6 @@ Some features that can be added in the future are:
 - Mobile application
 
 
-
 15. Screenshots :
 
 Screenshots of the application can be added here to show the main pages and features.
@@ -423,7 +414,6 @@ screenshots/
 ├── services.png
 ├── request.png
 └── admin-dashboard.png
-
 
 
 16. Contributing :
@@ -438,11 +428,9 @@ If you want to contribute to this project:
 6. Create a Pull Request
 
 
-
 17. License :
 
 This project was created for learning and development purposes.
-
 
 
 18. Author :
