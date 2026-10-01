@@ -185,29 +185,43 @@ The token is checked before allowing access to protected APIs.
 
 6. Project Structure :
 
-SmartServe/
-│
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   ├── pages/
-│   ├── services/
-│   ├── context/
-│   └── App.js
-│
-└── package.json
+• SmartServe
 
-├── server/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── config/
-│   ├── server.js
-│   └── package.json
-│
-├── .gitignore
-└── README.md
+  • client
+
+    • src
+
+      • components
+
+      • pages
+
+      • services
+
+      • context
+
+      • App.js
+
+    • package.json
+
+  • server
+
+    • controllers
+
+    • models
+
+    • routes
+
+    • middleware
+
+    • config
+
+    • server.js
+
+    • package.json
+
+  • .gitignore
+
+  • README.md
 
 
 a) Client :
@@ -407,13 +421,29 @@ Some features that can be added in the future are:
 
 Screenshots of the application can be added here to show the main pages and features.
 
-screenshots/
-├── login.png
-├── register.png
-├── dashboard.png
-├── services.png
-├── request.png
-└── admin-dashboard.png
+• Login Page
+
+  • login.png
+
+• Register Page
+
+  • register.png
+
+• Dashboard
+
+  • dashboard.png
+
+• Services Page
+
+  • services.png
+
+• Service Request Page
+
+  • request.png
+
+• Admin Dashboard
+
+  • admin-dashboard.png
 
 
 16. Contributing :
